@@ -21,6 +21,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page
 
 streamlit.dataframe(fruits_to_show)
+add_my_fruit = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+add_my_fruit = add_my_fruit.set_index('Fruit')
 
 streamlit.header("Fruityvice Fruit Advice!")
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
